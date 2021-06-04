@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import backgroundBeer from '../../assets/background-beer.jpg';;
 
 export const Container = styled.header`
-    background: #ccc44F;
-
-
+    background: url(${backgroundBeer}) no-repeat;
+    background-size: cover;
 
 `;
 
