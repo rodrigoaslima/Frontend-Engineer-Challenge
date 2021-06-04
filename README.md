@@ -1,46 +1,95 @@
-# Getting Started with Create React App
+<h1 align="center">Frontend Engineer Challenge</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+<h1 align="center">Table of contents</h1>
+<p align="center">
+ <a href="#About">About</a> • 
+ <a href="#how-to-run">How to run</a> • 
+ <a href="#dependencies">Depedencies</a> • 
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+<br>
 
-### `yarn start`
+# About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">Proposed challenge to create a website to consume 3 different API's.</p>
+<br>
+<p>For this purpose reactJS, axios, typescript was used</p>
+<ul>
+	<li>Brewdog Beers: <a href="https://punkapi.com/documentation/v2">https://punkapi.com/documentation/v2</a>
+	<li>Music artists: <a href="https://developer.spotify.com/web-api/">https://developer.spotify.com/web-api/</a></li>
+	<li>Marvel comics: <a href="https://developer.marvel.com/docs">https://developer.marvel.com/docs</a></li>
+</ul>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# How to run
 
-### `yarn test`
+```bash
+$ yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tools used:
 
-### `yarn build`
+- [Node.js 16.14.0](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/download)
+- [ReactJS 17.0.2](https://pt-br.reactjs.org/) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
+ 
+To install typeScript globally, run command:
+ 
+```bash 
+$ npm install -g typescript
+```
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Yarn
 
-### `yarn eject`
+```bash
+$ yarn install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Axios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+$ yarn add axios -s
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+#### Router
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+$ yarn add react-router-dom -s
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+
+#### Router Ts
+
+```bash
+$ yarn add @types/react-router-dom -D
+```
+
+<br>
+
+#### Styled Components
+
+```bash
+$ yarn add styled-components -s
+```
+
+<br>
+
+#### Styled Components Ts
+
+```bash
+$ yarn add @types/styled-components -D
+```
+
+<br>
