@@ -9,12 +9,16 @@ export function Home(){
         history.push('/brewdogsbeer')
     }
 
+    const marvel = () => {
+        history.push('/marvel')
+    }
+
 
     return(
         <Container>
             <Beer onClick={()=> brewdogsbeer()}/>
                 
-            <Comics/>
+            <Comics onClick={()=> marvel()}/>
 
             <Music />
            
