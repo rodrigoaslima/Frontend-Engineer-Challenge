@@ -4,8 +4,9 @@ import { marvelAPI} from './services/api';
 interface Characters {
     name: string;
     id: number;
-    image_url: string;
+    comics: any;
     description: string;
+    thumbnail: any;
 
 }
 
