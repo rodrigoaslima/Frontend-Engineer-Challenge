@@ -15,15 +15,22 @@ interface MarvelProviderProps{
     children: ReactNode;
 }
 
+interface ParamsInterface{
+    name: string;
+}
+
 interface MarvelContextData{
     characters: Characters[];
+    foundedCharacter: Characters[];
+    filterHero: (hero: ParamsInterface)=> Promise<void>;
     
 }
 
 export const MarvelContext = createContext<MarvelContextData>({} as MarvelContextData)
 
 export function MarvelCharacterProvider({children}:MarvelProviderProps){
- const [characters, setCharacter] = useState([])
+ const [characters, setCharacter] = useState<Characters[]>([])
+ const [foundedCharacter, setFoundedCharacter] = useState<Characters[]>([])
 
     useEffect(()=>{
         marvelAPI.get("/characters?ts=1623177601&apikey=587e683a919504a8b9323de33aeebd54&hash=d419ee5d0a458ac5c15cb80156fb9b8e")
@@ -33,8 +40,19 @@ export function MarvelCharacterProvider({children}:MarvelProviderProps){
         )
     },[])
 
+    async function filterHero({name} : ParamsInterface){
+        await marvelAPI.get(`/characters?name=${name}&ts=1623177601&apikey=587e683a919504a8b9323de33aeebd54&hash=d419ee5d0a458ac5c15cb80156fb9b8e`)
+        .then(response=>{
+                setFoundedCharacter(response.data.data.results)
+            }
+        )
+        
+        //await marvelAPI.get(`/characters/${id}`).then(response => setCharacter(response.data.data.results))
+
+    }
+
     return (
-        <MarvelContext.Provider value={{characters}}>
+        <MarvelContext.Provider value={{characters,filterHero, foundedCharacter}}>
             {children}
         </MarvelContext.Provider>
     )

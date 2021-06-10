@@ -62,7 +62,7 @@ export const SearchBar = styled.div`
     color: #d7d7d7;
     background-color: #2b3d4f;
 
-    div{
+    form{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -103,11 +103,5 @@ export const Card = styled.div`
         flex: 1;
         width: 100%;
     }
-
-`;
-
-export const Hero = styled.div`
-    background: url(${captainMarvel}) no-repeat center;
-    background-size: cover; 
 
 `;

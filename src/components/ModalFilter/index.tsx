@@ -41,8 +41,6 @@ export function ModalFilter({isOpen, onRequestClose, ingredient}: NewFilterModal
 
     async function handleNewFilter(event: FormEvent){
         event.preventDefault()
-        console.log('filterOption: ', filterOption)
-        console.log('selected: ', selected)
         
         await filterBeers({ingredient: filterOption, type:selected})
 
