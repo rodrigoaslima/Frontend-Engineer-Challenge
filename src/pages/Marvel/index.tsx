@@ -1,4 +1,6 @@
-import {Container, Menu} from './styles'
+import {Link} from 'react-router-dom'
+
+import {Container, Menu, Card} from './styles'
 
 import eventsImg from '../../assets/events.jpg'
 import seriesImg from '../../assets/series.jpg'
@@ -14,10 +16,27 @@ export function Marvel(){
             </header>
             
             <Menu>
-                <div><img src={eventsImg} alt="Events" /></div>
-                <div><img src={seriesImg} alt="Series" /></div>
-                <div><img src={comicsIms} alt="Comics" /></div>
-                <div><img src={charactersImg} alt="Character" /></div>
+                <Card>
+
+                    <div><Link to="/events"><img src={eventsImg} alt="Events" /></Link></div>
+                    <h3>Events</h3>
+                </Card>
+
+                <Card>
+                    <div><Link to="/series"><img src={seriesImg} alt="Series" /></Link></div>
+                    <h3>Series</h3>
+                </Card>
+                
+                <Card>
+                    <div><Link to="/comics"><img src={comicsIms} alt="Comics" /></Link></div>
+                    <h3>Comics</h3>
+                </Card>
+                
+                <Card>
+                    <div><Link to="/character"><img src={charactersImg} alt="Character" /></Link></div>
+                    <h3>Characters</h3>
+                </Card>
+                
             </Menu>
 
 
